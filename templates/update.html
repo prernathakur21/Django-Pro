@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Update Employee </h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Enter Employee name" value="{{ emp.name }}">
+        <input type="text" name="salary" placeholder="Enter Employee salary" value="{{ emp.salary }}">
+        <input type="text" name="age" placeholder="Enter Employee age" value="{{ emp.age }}">
+        <input type="text" name="city" placeholder="Enter Employee city" value="{{ emp.city }}">
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        h1{
+            font-size: 40px;
+            padding-top: 100px;
+        }
+        h3{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    {% extends 'navbar.html' %}
+    {% block content %}
+    <h1>Welcome to my Project</h1>
+    <h3>This is Home page</h3>
+    {% endblock %}
+</body>
+</html>

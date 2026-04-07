@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Navbar</title>
+    <style>
+        nav {
+            display: flex;
+            width: 1220px;
+            justify-content: space-between;
+            /* border: 2px solid red; */
+            background-color: rgb(104, 200, 220);
+            padding: 0 20px;
+        }
+
+        .link {
+            padding-top: 20px;
+        }
+
+        .link a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>CRUD Application</h2>
+        <div class="link">
+            <a href="/ ">Home</a>
+            <a href="/signup/">signup</a>
+            <a href="/signin/">signin</a>
+        </div>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+
+
+</html>

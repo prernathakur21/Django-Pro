@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      h1{
+            margin-left: 440px;
+            margin-top: 40px;
+        }
+      h3{
+            margin-left: 520px;
+        }
+        form{
+            display: flex;
+            margin-left: 400px;
+            flex-direction: column;
+            width: 350px;
+            border: 2px solid rgb(85, 221, 221);
+            padding: 40px 20px;
+            border-radius: 15px;
+            justify-content: center;
+        }
+        form button{
+            width: 100px;
+            background-color: rgb(86, 236, 236);
+            border: none;
+            color: Black;
+            padding: 5px;
+            cursor: pointer;
+        }
+        form input{
+            padding: 5px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    {% extends 'navbar.html' %}
+    {% block content %}
+    <h1>Welcome to my project</h1>
+    <h3>This is Sign in Page</h3>
+  <form method="POST">
+    {% if messages %}
+      {% for message in messages %}
+         <p style="color: red;">{{message}}</p>
+      {% endfor %}
+    {% endif %}
+    {% csrf_token %}
+    <label for="username">Name.</label>
+    <input type="text" name="username" placeholder="Enter your username.........."><br>
+    <label for="Password">Password.</label>
+    <input type="password" name="password" placeholder="Enter your password........."><br>
+    <button type="submit">Signup</button>
+    </form>
+    {% endblock %}
+    
+    
+</body>
+</html>

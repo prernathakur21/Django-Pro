@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>city</th>
+            <th>age</th>
+
+        </tr>
+        {% for emp in employee %}
+        <tr>
+            <td>{{ emp.name }}</td>
+            <td>{{ emp.salary }}</td>
+            <td>{{ emp.city }}</td>
+            <td>{{ emp.age }}</td>
+            <td><a href="/delete/{{emp.id}}">Delete</a></td>
+            <td><a href="/update/{{emp.id}}">Update</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Navbar</title>
+</head>
+<body>
+
+<nav>
+    <div class="nav">
+        <a href="/welcome">welcome</a>
+        <a href="/welcome/add">Add Employee</a>
+        <a href="{% url 'signout' %}">logout</a>
+        
+      
+    </div>
+</nav>
+<hr>
+{% block content %}  
+{% endblock %}
+
+</body>
+  
